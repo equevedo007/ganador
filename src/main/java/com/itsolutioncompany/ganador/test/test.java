@@ -8,8 +8,7 @@ public class test {
 
 	public static void main(String[] args) {
 
-		ConexionBD cn = new ConexionBD();
-		cn.getConeccionBD();
+		System.out.println("Total : "  + CalcularTotalSorteos.TotalDias());
 
 	}
 
