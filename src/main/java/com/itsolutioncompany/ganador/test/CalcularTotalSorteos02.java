@@ -1,10 +1,11 @@
 package com.itsolutioncompany.ganador.test;
+
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.time.DayOfWeek;
 import java.util.stream.Stream;
 
-public class CalcularTotalSorteos {
+public class CalcularTotalSorteos02 {
 
     public static void main (String [] args){
 
@@ -20,17 +21,19 @@ public class CalcularTotalSorteos {
     }
 
     public static int TotalDias(){
-        int total =0;
+        int total =0; //10/05/2014
         // Definir las fechas de inicio
-        LocalDate startForSundays = LocalDate.of(1994, 10, 16);
-        LocalDate startForWednesdays = LocalDate.of(2004, 5, 19);
+        LocalDate startForTuesday = LocalDate.of(2014, 05, 10);
+        LocalDate startForWednesdays = LocalDate.of(2014, 05, 10);
+        LocalDate startForSaturday = LocalDate.of(2014, 05, 10);
         LocalDate end = LocalDate.now(); // Fecha actual
 
         // Contar domingos y miercoles
-        long sundaysCount = countDaysBetween(startForSundays, end, DayOfWeek.SUNDAY);
+        long sundaysCount = countDaysBetween(startForTuesday, end, DayOfWeek.TUESDAY);
         long wednesdaysCount = countDaysBetween(startForWednesdays, end, DayOfWeek.WEDNESDAY);
+        long SaturdayCount = countDaysBetween(startForSaturday, end, DayOfWeek.SATURDAY);
 
-        long totalDays = sundaysCount + wednesdaysCount;
+        long totalDays = sundaysCount + wednesdaysCount +SaturdayCount;
 
        // System.out.println("Numero de domingos desde el " + startForSundays + " hasta el " + end + ": " + sundaysCount);
         //System.out.println("Numero de miercoles desde el " + startForWednesdays + " hasta el " + end + ": " + wednesdaysCount);
