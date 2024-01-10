@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 import com.itsolutioncompany.ganador.bean.JugadaGanadoraBean;
 import com.itsolutioncompany.ganador.servicio.ServicioJugadaGanadoraDAO;
 import com.itsolutioncompany.ganador.test.CalcularTotalSorteos01;
+import com.itsolutioncompany.ganador.test.CalcularTotalSorteos02;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -52,7 +53,7 @@ public class JFramePrincipal extends JFrame {
 
             ServicioJugadaGanadoraDAO servicio = new ServicioJugadaGanadoraDAO();
 
-           int numero = CalcularTotalSorteos01.TotalDias();
+           int numero = CalcularTotalSorteos02.TotalDias();
 
             for (int i = 0; i < numero; i++) {
                 servicio.RealizarJugada();
