@@ -55,6 +55,8 @@ public class JFramePrincipal extends JFrame {
 
            int numero = CalcularTotalSorteos02.TotalDias();
 
+			//int numero = Integer.parseInt(textNumero.getText());
+
             for (int i = 0; i < numero; i++) {
                 servicio.RealizarJugada();
             }
