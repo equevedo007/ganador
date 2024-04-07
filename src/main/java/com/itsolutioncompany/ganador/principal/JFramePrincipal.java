@@ -53,7 +53,7 @@ public class JFramePrincipal extends JFrame {
 
             ServicioJugadaGanadoraDAO servicio = new ServicioJugadaGanadoraDAO();
 
-           int numero = CalcularTotalSorteos02.TotalDias();
+           int numero = CalcularTotalSorteos01.TotalDias();
 
 			//int numero = Integer.parseInt(textNumero.getText());
 
