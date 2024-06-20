@@ -7,7 +7,7 @@ public class Principal {
 		JFramePrincipal jfmPrincipal = new JFramePrincipal();
 		jfmPrincipal.setVisible(true);
 
-		// Edinson  Quevedo Holguin - 24-12-2024
+		// Edinson  Quevedo Holguin - 20-06-2024
 
 
 	}
