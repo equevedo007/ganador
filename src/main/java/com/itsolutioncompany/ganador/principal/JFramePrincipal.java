@@ -53,11 +53,15 @@ public class JFramePrincipal extends JFrame {
 
             ServicioJugadaGanadoraDAO servicio = new ServicioJugadaGanadoraDAO();
 
-           int numero = CalcularTotalSorteos01.TotalDias();
+			int totalDias = CalcularTotalSorteos01.TotalDias() +1 ;
 
-			//int numero = Integer.parseInt(textNumero.getText());
+		  //int numero = Integer.parseInt(textNumero.getText());
 
-            for (int i = 0; i < numero; i++) {
+			System.out.printf("Total de días :  " + totalDias +"\n"+"\n");
+
+
+
+            for (int i = 0; i < totalDias; i++) {
                 servicio.RealizarJugada();
             }
 
@@ -67,6 +71,8 @@ public class JFramePrincipal extends JFrame {
             String numero04 = servicio.obtenerNumero04().getNumero04();
             String numero05 = servicio.obtenerNumero05().getNumero05();
             String numero06 = servicio.obtenerNumero06().getNumero06();
+			
+
 
             JugadaGanadoraBean ObjJugadaGanadoraBean = new JugadaGanadoraBean(numero01,numero02,numero03,numero04,numero05,numero06);
 
@@ -74,7 +80,9 @@ public class JFramePrincipal extends JFrame {
             lista.add(ObjJugadaGanadoraBean);
 
 
-            textArea.setText("Total Numero de Registros -->>  "  + numero +"\n"+"\n") ;
+
+
+            textArea.setText("Total Numero de Registros -->>  "  + totalDias +"\n"+"\n") ;
             textArea.append("El Numero 01 es : " + numero01+"\n");
             textArea.append("El Numero 02 es : " + numero02+"\n");
             textArea.append("El Numero 03 es : " + numero03+"\n");
